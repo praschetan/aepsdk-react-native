@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Button, View } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
+import {Button, View} from 'react-native';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import {NavigationContainer} from '@react-navigation/native';
 import ProfileView from './extensions/ProfileView';
 import MessagingView from './extensions/MessagingView';
 import CoreView from './extensions/CoreView';
@@ -10,11 +10,12 @@ import ConsentView from './extensions/ConsentView';
 import EdgeView from './extensions/EdgeView';
 import AssuranceView from './extensions/AssuranceView';
 import EdgeIdentityView from './extensions/EdgeIdentityView';
-import { NavigationProps } from './types/props';
+import {NavigationProps} from './types/props';
+import TargetView from './extensions/TargetView';
 
-function HomeScreen({ navigation }: NavigationProps) {
+function HomeScreen({navigation}: NavigationProps) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Button
         onPress={() => navigation.navigate('CoreView')}
         title="Core/Lifecycle/Signal"
@@ -29,11 +30,9 @@ function HomeScreen({ navigation }: NavigationProps) {
       />
       <Button
         onPress={() => navigation.navigate('MessagingView')}
-        title="Messaging" />
-      <Button
-        onPress={() => navigation.navigate('EdgeView')}
-        title="Edge"
+        title="Messaging"
       />
+      <Button onPress={() => navigation.navigate('EdgeView')} title="Edge" />
       <Button
         onPress={() => navigation.navigate('EdgeIdentityView')}
         title="EdgeIdentity"
@@ -46,6 +45,7 @@ function HomeScreen({ navigation }: NavigationProps) {
         onPress={() => navigation.navigate('AssuranceView')}
         title="Assurance"
       />
+      <Button onPress={() => navigation.navigate('TargetView')} title="Target" />
     </View>
   );
 }
@@ -65,7 +65,8 @@ export default function App() {
         <Drawer.Screen name="EdgeIdentityView" component={EdgeIdentityView} />
         <Drawer.Screen name="ConsentView" component={ConsentView} />
         <Drawer.Screen name="AssuranceView" component={AssuranceView} />
-      </Drawer.Navigator >
-    </NavigationContainer >
+        <Drawer.Screen name="TargetView" component={TargetView} />
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
 }

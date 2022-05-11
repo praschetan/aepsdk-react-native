@@ -25,6 +25,8 @@ PODS:
   - AEPServices (3.4.2)
   - AEPSignal (3.4.2):
     - AEPCore (>= 3.4.2)
+  - AEPTarget (3.1.2):
+    - AEPCore (>= 3.1.0)
   - AEPUserProfile (3.0.1):
     - AEPCore
   - boost-for-react-native (1.63.0)
@@ -67,6 +69,9 @@ PODS:
     - React
   - RCTAEPMessaging (1.0.0-beta.2):
     - AEPMessaging (~> 1.0)
+    - React
+  - RCTAEPTarget (1.0.0-beta.1):
+    - AEPTarget (~> 3.1)
     - React
   - RCTAEPUserProfile (1.0.0):
     - AEPUserProfile (~> 3.0)
@@ -255,7 +260,7 @@ PODS:
     - React-jsi (= 0.64.2)
     - React-perflogger (= 0.64.2)
   - React-jsinspector (0.64.2)
-  - react-native-safe-area-context (3.3.2):
+  - react-native-safe-area-context (3.4.1):
     - React-Core
   - React-perflogger (0.64.2)
   - React-RCTActionSheet (0.64.2):
@@ -325,7 +330,7 @@ PODS:
     - React
   - RNGestureHandler (1.10.3):
     - React-Core
-  - RNReanimated (2.2.4):
+  - RNReanimated (2.7.0):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -333,7 +338,6 @@ PODS:
     - RCT-Folly
     - RCTRequired
     - RCTTypeSafety
-    - React
     - React-callinvoker
     - React-Core
     - React-Core/DevSupport
@@ -351,10 +355,9 @@ PODS:
     - React-RCTNetwork
     - React-RCTSettings
     - React-RCTText
-    - React-RCTVibration
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (3.9.0):
+  - RNScreens (3.13.1):
     - React-Core
     - React-RCTImage
   - Yoga (1.14.0)
@@ -372,6 +375,7 @@ DEPENDENCIES:
   - RCTAEPEdgeConsent (from `../../../packages/edgeconsent`)
   - RCTAEPEdgeIdentity (from `../../../packages/edgeidentity`)
   - RCTAEPMessaging (from `../../../packages/messaging`)
+  - RCTAEPTarget (from `../../../packages/target`)
   - RCTAEPUserProfile (from `../../../packages/userprofile`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -416,6 +420,7 @@ SPEC REPOS:
     - AEPRulesEngine
     - AEPServices
     - AEPSignal
+    - AEPTarget
     - AEPUserProfile
     - boost-for-react-native
 
@@ -445,6 +450,8 @@ EXTERNAL SOURCES:
     :path: "../../../packages/edgeidentity"
   RCTAEPMessaging:
     :path: "../../../packages/messaging"
+  RCTAEPTarget:
+    :path: "../../../packages/target"
   RCTAEPUserProfile:
     :path: "../../../packages/userprofile"
   RCTRequired:
@@ -517,15 +524,16 @@ SPEC CHECKSUMS:
   AEPEdgeIdentity: 5c42cef81835851232136a9e1fbbbe33b204ee11
   AEPIdentity: fbf755560afcbb0acd66cd5b6a1c147530fca5f6
   AEPLifecycle: 1e0e843465fb143f8d8949dcf06de169d5c26f62
-  AEPMessaging: 661cc08435254f3c9cc0899785c20a7952952e95
+  AEPMessaging: 69ddb87d33b92c68d751a0a9713a8ed90f003f1f
   AEPRulesEngine: bb2927ed5501ddf9754c66e97f8d2b1cf8e33b19
   AEPServices: 3214311f239c8cdc6267d757200b05ec0ab05878
   AEPSignal: be3a4789b492f4d5a5aef7408f30ff8e866d1d79
+  AEPTarget: 306f81f54d04f014456c4f00e92f1096e2116650
   AEPUserProfile: 2ddb5ba8e2c22dd8f942992306b050f4be2c2403
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: e686045572151edef46010a6f819ade377dfeb4b
-  FBReactNativeSpec: a2f531d996fa0cfec14dc62700efc19d68982a65
+  FBReactNativeSpec: 8079de7dfa4fd4aab0e97969116b246069f7ec3e
   glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
   RCT-Folly: ec7a233ccc97cc556cf7237f0db1ff65b986f27c
   RCTAEPAssurance: 9f51b9b5da17f9b98a41ce29e4f3e3b67ea36c17
@@ -534,6 +542,7 @@ SPEC CHECKSUMS:
   RCTAEPEdgeConsent: b998b2d08f254635ef01263fea186d7262f2d242
   RCTAEPEdgeIdentity: 7f1cd37ab633945599fbe23d41db22a1176f3726
   RCTAEPMessaging: 5ff246c624ceb253f93dbb1ae96af4ec898c91af
+  RCTAEPTarget: 90d883f41b0a41ac18503daf97d2aa82042df6b7
   RCTAEPUserProfile: 341c77e0d18d69872c81e425a2e9cae37fe82045
   RCTRequired: 6d3e854f0e7260a648badd0d44fc364bc9da9728
   RCTTypeSafety: c1f31d19349c6b53085766359caac425926fafaa
@@ -545,7 +554,7 @@ SPEC CHECKSUMS:
   React-jsi: 67747b9722f6dab2ffe15b011bcf6b3f2c3f1427
   React-jsiexecutor: 80c46bd381fd06e418e0d4f53672dc1d1945c4c3
   React-jsinspector: cc614ec18a9ca96fd275100c16d74d62ee11f0ae
-  react-native-safe-area-context: 584dc04881deb49474363f3be89e4ca0e854c057
+  react-native-safe-area-context: 9e40fb181dac02619414ba1294d6c2a807056ab9
   React-perflogger: 25373e382fed75ce768a443822f07098a15ab737
   React-RCTActionSheet: af7796ba49ffe4ca92e7277a5d992d37203f7da5
   React-RCTAnimation: 6a2e76ab50c6f25b428d81b76a5a45351c4d77aa
@@ -560,8 +569,8 @@ SPEC CHECKSUMS:
   ReactCommon: 149906e01aa51142707a10665185db879898e966
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
-  RNReanimated: 024eff8202342abf4b24e11575a16afc441dabfe
-  RNScreens: 4d79118be80f79fa1f4aa131909a1d6e86280af3
+  RNReanimated: 93fe36bf01e6bd4346e0ffc9e469ce37a6b2bea9
+  RNScreens: 40a2cb40a02a609938137a1e0acfbf8fc9eebf19
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
 
 PODFILE CHECKSUM: 18e76638d1b25ad6c02b6b9e0bfacb8bcefda684

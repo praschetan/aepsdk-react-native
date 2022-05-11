@@ -90,6 +90,21 @@ jest.doMock('react-native', () => {
                     track: jest.fn(),
                     handleJavascriptMessage: jest.fn(() => new Promise(resolve => resolve(new Object()))),
                     clear: jest.fn()
+                },
+                AEPTarget: {
+                    extensionVersion: jest.fn(() => new Promise(resolve => resolve(''))),
+                    registerExtension: jest.fn(),
+                    clearPrefetchCache: jest.fn(),
+                    getThirdPartyId: jest.fn(() => new Promise(resolve => resolve(''))),
+                    getTntId: jest.fn(() => new Promise(resolve => resolve(''))),
+                    resetExperience: jest.fn(),
+                    setPreviewRestartDeeplink: jest.fn(),
+                    setThirdPartyId: jest.fn(),
+                    retrieveLocationContent: jest.fn(),
+                    prefetchContent: jest.fn(() => new Promise(resolve => resolve(''))),
+                    locationsDisplayed: jest.fn(),
+                    locationClickedWithName: jest.fn(),
+                    registerTargetRequests: jest.fn()
                 }
             },
             NativeEventEmitter: class {                
